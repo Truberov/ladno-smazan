@@ -9,3 +9,11 @@ services:
     volumes:
       - ./.byaldi/:/code/.byaldi
     restart: always
+
+  tg_bot:
+    build:
+      context: ./tg_bot
+      dockerfile: ./Dockerfile
+    env_file:
+      - .env
+    restart: always

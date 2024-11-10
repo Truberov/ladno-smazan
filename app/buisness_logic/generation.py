@@ -1,16 +1,28 @@
 from app.functional_components import (
     RAGMultiModalModelPipeline,
+    Agent,
     get_llm_model,
     get_retriever,
     get_settings,
-    SYSTEM_PROMPT,
+    RAG_SYSTEM_PROMPT,
+    AGENT_PROMPT_TEMPLATE,
 )
 
 settings = get_settings()
-assistant = RAGMultiModalModelPipeline(
-    retriever=get_retriever(settings),
-    llm=get_llm_model(settings),
-    system_prompt=SYSTEM_PROMPT,
+retriever = get_retriever(settings)
+llm = get_llm_model(settings)
+
+rag_pipeline = RAGMultiModalModelPipeline(
+    retriever=retriever,
+    llm=llm,
+    system_prompt=RAG_SYSTEM_PROMPT,
     settings=settings,
 )
-assistant.build_chain()
+rag_pipeline.build_chain()
+
+agent = Agent(
+    llm=llm,
+    system_prompt=AGENT_PROMPT_TEMPLATE,
+    rag_pipeline=rag_pipeline,
+)
+agent.build_agent()

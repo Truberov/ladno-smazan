@@ -33,7 +33,7 @@ class RAGMultiModalModelPipeline:
 
     async def get_messages(self, _input_data: dict[str, Any]) -> list[BaseMessage]:
         query = _input_data['query']
-        image_url = f"data:image/jpeg;base64,{self.format_context(_input_data["context"])}"
+        image_url = f"data:image/jpeg;base64,{self.format_context(_input_data["context"][0])}"
 
         return [
             SystemMessage(content=self._system_prompt),
@@ -48,10 +48,12 @@ class RAGMultiModalModelPipeline:
     async def reply(self, data: dict[str, Any]) -> dict[str, Any]:
         return await self.chain.ainvoke(data)
 
-    async def get_retriever_result(self, query: str) -> Result:
-        _result = self._retriever.search(k=self._settings.retriever_top_k, query=query)[0]
-        _result.doc_id = ID_MAP.get(_result.doc_id)
-        return _result
+    async def get_retriever_result(self, query: str) -> list[Result]:
+        _results = self._retriever.search(k=self._settings.retriever_top_k, query=query)
+        for _result in _results:
+            _result.doc_id = ID_MAP.get(str(_result.doc_id))
+
+        return _results
 
     def build_chain(self) -> None:
         generation_chain = RunnableLambda(self.get_messages) | self._llm | StrOutputParser()

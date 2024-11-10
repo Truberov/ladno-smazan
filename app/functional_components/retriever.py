@@ -1,5 +1,3 @@
-import os
-
 from byaldi import RAGMultiModalModel
 
 from .settings import Settings
