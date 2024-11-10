@@ -1,6 +1,6 @@
 # ladno-smazan
 
-![kandinsky-download-1727581197737](https://www.google.com/url?sa=i&url=https%3A%2F%2Fswedbyte.ru%2F4-tipa-chat-botov%2F&psig=AOvVaw0XMOgG4iM2VDd7_1z4GEBe&ust=1731295846051000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIi7teLp0IkDFQAAAAAdAAAAABAE)
+![kandinsky-download-1727581197737](assets/123.png)
 
  # :robot: AI Assistant for Advertising Agency Data Search 
 
