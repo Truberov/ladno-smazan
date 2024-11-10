@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    # openai_base_url: str
+    openai_base_url: str
     openai_model_name: str
     openai_temperature: float
     openai_api_key: str
