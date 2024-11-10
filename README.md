@@ -1,6 +1,6 @@
 # ladno-smazan
 
-![kandinsky-download-1727581197737](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vedomosti.ru%2Fkp%2Ftechnopark%2Farticle%2F2021%2F01%2F14%2F854062-chat-boti-idut-na-pomosch&psig=AOvVaw1e6VidjlSul0Xmhk_RSHye&ust=1731270633403000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMinwuuL0IkDFQAAAAAdAAAAABAE)
+![kandinsky-download-1727581197737](https://www.google.com/url?sa=i&url=https%3A%2F%2Fswedbyte.ru%2F4-tipa-chat-botov%2F&psig=AOvVaw0XMOgG4iM2VDd7_1z4GEBe&ust=1731295846051000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIi7teLp0IkDFQAAAAAdAAAAABAE)
 
  # :robot: AI Assistant for Advertising Agency Data Search 
 
