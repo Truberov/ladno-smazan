@@ -66,14 +66,15 @@
  - make
 
  **Запуск инференса LLM**
-    ```
-    vllm serve --dtype half --max-model-len 16000 -tp 1 Vikhrmodels/Vikhr-Nemo-12B-Instruct-R-21-09-24 --api-key token-abc123
-    ```
+```
+vllm serve --dtype half --max-model-len 16000 -tp 1 Vikhrmodels/Vikhr-Nemo-12B-Instruct-R-21-09-24 --api-key token-abc123
+```
 
  **Развертывание**
-    ```
-    make up
-    ```
+```
+make up
+```
+
 Теперь вы сможете взаимодействовать с чат-ботом и задавать вопросы.
 
  # :computer: Пример использования
